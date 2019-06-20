@@ -227,8 +227,7 @@
 
         /**
          * @param string $name
-         * @returns mixed
-         * @return bool
+         * @return mixed
          * @throws Exception
          */
         public function getConfiguration(string $name)

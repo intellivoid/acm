@@ -33,24 +33,28 @@
                 return;
             }
 
+            if(isset($_SERVER['argv'][1]) == false)
+            {
+                return;
+            }
+
             switch($_SERVER['argv'][1])
             {
                 case "build-mc":
                     $this->buildMasterConfiguration();
-                    break;
+                    exit(0);
 
                 case 'status':
                     $this->status();
-                    break;
+                    exit(0);
 
-                default:
+                case 'help':
                     print(" acm Usage Commands\n");
                     print("     build-mc    = Builds the master configuration file\n");
                     print("     status      = Displays how configuration is managed in this setup\n");
-                    break;
+                    exit(0);
             }
 
-            exit(0);
         }
 
         public function status()

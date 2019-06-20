@@ -3,9 +3,6 @@
 
     namespace acm;
 
-    use acm\Exceptions\NoConfigurationFoundException;
-    use Exception;
-
     /**
      * Class CommandLine
      * @package acm
@@ -42,17 +39,66 @@
                     $this->buildMasterConfiguration();
                     break;
 
+                case 'status':
+                    $this->status();
+                    break;
+
                 default:
                     print(" acm Usage Commands\n");
                     print("     build-mc    = Builds the master configuration file\n");
                     print("     status      = Displays how configuration is managed in this setup\n");
                     break;
             }
+
+            exit(0);
+        }
+
+        public function status()
+        {
+            print("Master Configuration Location: " . $this->acm->getMasterConfigurationLocation() . "\n");
+            if($this->acm->isMasterConfigurationLoaded() == false)
+            {
+                print("Master Configuration Loaded: False\n");
+            }
+            else
+            {
+                print("Master Configuration Loaded: True\n");
+            }
+
+            print("Working Directory: " . acm::getWorkingDirectory() . "\n");
+            if(file_exists(acm::getWorkingDirectory()) == false)
+            {
+                print("Working Directory Exists: False\n");
+            }
+            else
+            {
+                print("Working Directory Exists: True\n");
+            }
+
+            $LocalConfiguration = $this->acm->getBaseDirectory() . DIRECTORY_SEPARATOR . 'configuration.ini';;
+            print("Local Configuration: " . $LocalConfiguration . "\n");
+            if(file_exists($LocalConfiguration) == false)
+            {
+                print("Local Configuration Exists: False\n");
+            }
+            else
+            {
+                print("Local Configuration Exists: True\n");
+            }
+
+            if($this->acm->isMasterConfigurationLoaded() == false)
+            {
+                print("Warning: The master configuration was not loaded, acm will attempt to use the local configuration instead\n");
+            }
+
+            if(file_exists($LocalConfiguration) == false)
+            {
+                print("Warning: The local configuration is not found, if the master configuration is not found either then the application may throw errors\n");
+            }
         }
 
         /**
          * Builds the master configuration
-         * @throws NoConfigurationFoundException
          */
         public function buildMasterConfiguration()
         {

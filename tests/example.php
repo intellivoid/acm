@@ -13,7 +13,6 @@
     $DatabaseConfigSchema->setDefinition('port', '3306');
     $DatabaseConfigSchema->setDefinition('username', 'root');
     $DatabaseConfigSchema->setDefinition('password', '');
-
     $acm->defineSchema('Database', $DatabaseConfigSchema);
 
     $acm->processCommandLine();

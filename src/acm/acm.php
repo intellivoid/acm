@@ -337,4 +337,12 @@
             return $this->MasterConfigurationLoaded;
         }
 
+        /**
+         * @return string
+         */
+        public function getMasterConfigurationLocation(): string
+        {
+            return $this->MasterConfigurationLocation;
+        }
+
     }

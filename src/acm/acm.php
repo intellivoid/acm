@@ -12,6 +12,7 @@
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'LocalConfigurationException.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoConfigurationFoundException.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Objects' . DIRECTORY_SEPARATOR . 'Schema.php');
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'CommandLine.php');
 
     /**
      * Class acm
@@ -301,6 +302,39 @@
             }
 
             return $ParsedConfiguration[$name];
+        }
+
+        /**
+         * Processes any command line commands
+         */
+        public function processCommandLine()
+        {
+            $CommandLine = new CommandLine($this);
+            $CommandLine->processCommandLine();
+        }
+
+        /**
+         * @return array
+         */
+        public function getMasterConfiguration(): array
+        {
+            return $this->MasterConfiguration;
+        }
+
+        /**
+         * @return string
+         */
+        public function getBaseDirectory(): string
+        {
+            return $this->BaseDirectory;
+        }
+
+        /**
+         * @return bool
+         */
+        public function isMasterConfigurationLoaded(): bool
+        {
+            return $this->MasterConfigurationLoaded;
         }
 
     }

@@ -16,4 +16,4 @@
 
     $acm->defineSchema('Database', $DatabaseConfigSchema);
 
-    var_dump($acm->getConfiguration('Database'));
+    $acm->processCommandLine();

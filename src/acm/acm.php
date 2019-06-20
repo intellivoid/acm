@@ -223,6 +223,7 @@
          * @param string $name
          * @returns mixed
          * @return bool
+         * @throws Exception
          */
         public function getConfiguration(string $name)
         {
@@ -239,7 +240,7 @@
                 {
                     $LocalConfiguration = $this->getLocalConfiguration($name);
                 }
-                catch(\Exception $exception)
+                catch(Exception $exception)
                 {
                     $LocalConfiguration = null;
                 }
@@ -277,6 +278,7 @@
          *
          * @param string $name
          * @return mixed
+         * @throws Exception
          */
         public function getLocalConfiguration(string $name)
         {

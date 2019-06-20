@@ -3,9 +3,14 @@
 
     namespace acm;
 
+    use acm\Exceptions\LocalConfigurationException;
+    use acm\Exceptions\NoConfigurationFoundException;
     use acm\Objects\Schema;
     use Exception;
 
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'LocalConfigurationException.php');
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoConfigurationFoundException.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Objects' . DIRECTORY_SEPARATOR . 'Schema.php');
 
     /**
@@ -267,7 +272,7 @@
 
             if(isset($this->MasterConfiguration['configurations'][$name]) == false)
             {
-                throw new Exception('No configuration for ' . $name . ' was found');
+                throw new NoConfigurationFoundException();
             }
 
             return $this->MasterConfiguration['configurations'][$name];
@@ -286,13 +291,13 @@
 
             if(file_exists($LocalConfiguration) == false)
             {
-                throw new Exception('No configuration file (Both acm and local) for ' . $name . ' was found');
+                throw new NoConfigurationFoundException();
             }
             $ParsedConfiguration = parse_ini_file($LocalConfiguration, true);
 
             if(isset($ParsedConfiguration[$name]) == false)
             {
-                throw new Exception('The local configuration does not contain the configuration for ' . $name);
+                throw new LocalConfigurationException();
             }
 
             return $ParsedConfiguration[$name];

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="730c7ef9-45ac-4f8c-8dec-fcbbb8a3c9b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acm/CommandLine.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/acm/CommandLine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/acm/acm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/acm/acm.php" afterDir="false" />
-    </list>
+    <list default="true" id="730c7ef9-45ac-4f8c-8dec-fcbbb8a3c9b5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/acm/CommandLine.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="149" column="60" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="60" />
+            <state relative-caret-position="1080">
+              <caret line="147" column="21" lean-forward="true" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -44,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/acm/acm.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -84,9 +80,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/configuration.ini" />
         <option value="$PROJECT_DIR$/tests/example.php" />
-        <option value="$PROJECT_DIR$/src/acm/acm.json" />
         <option value="$PROJECT_DIR$/src/acm/acm.php" />
         <option value="$PROJECT_DIR$/src/acm/CommandLine.php" />
+        <option value="$PROJECT_DIR$/src/acm/acm.json" />
       </list>
     </option>
   </component>
@@ -173,12 +169,12 @@
       <workItem from="1560989857661" duration="13068000" />
       <workItem from="1561063628440" duration="537000" />
       <workItem from="1561074751830" duration="165000" />
-      <workItem from="1561077296583" duration="109000" />
+      <workItem from="1561077296583" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14108000" />
+    <option name="totallyTimeSpent" value="14161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -197,7 +193,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -278,13 +274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/acm/acm.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/acm/acm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -297,8 +286,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/acm/CommandLine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="149" column="60" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="60" />
+        <state relative-caret-position="1080">
+          <caret line="147" column="21" lean-forward="true" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/acm/acm.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>

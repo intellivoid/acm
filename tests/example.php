@@ -12,7 +12,8 @@
     $DatabaseConfigSchema->setDefinition('host', 'localhost');
     $DatabaseConfigSchema->setDefinition('port', '3306');
     $DatabaseConfigSchema->setDefinition('username', 'root');
-    $DatabaseConfigSchema->setDefinition('password', '');
+    $DatabaseConfigSchema->setDefinition('password', 'd');
     $acm->defineSchema('Database', $DatabaseConfigSchema);
 
     $acm->processCommandLine();
+    var_dump($acm->getConfiguration('Database'));

@@ -1,0 +1,47 @@
+{
+    "package": {
+        "package_name": "net.intellioid.acm",
+        "name": "Advanced Configuration Manager Library",
+        "version": "1.0.0.3",
+        "author": "Zi Xing Narrakas",
+        "organization": "Intellivoid",
+        "description": "Centralizes configurations and provides an API for managing configurations",
+        "url": "https://github.com/intellivoid/acm",
+        "dependencies": [],
+        "configuration": {
+            "autoload_method": "indexed",
+            "main": null,
+            "post_installation": [],
+            "pre_installation": []
+        }
+    },
+    "components": [
+        {
+            "required": true,
+            "file": "Abstracts/ExceptionCodes.php"
+        },
+        {
+            "required": true,
+            "file": "acm.php"
+        },
+        {
+            "required": true,
+            "file": "CommandLine.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/LocalConfigurationException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/NoConfigurationFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/Schema.php"
+        }
+    ],
+    "files": [
+        "acm.json"
+    ]
+}

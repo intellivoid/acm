@@ -8,11 +8,14 @@
     use acm\Objects\Schema;
     use Exception;
 
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'LocalConfigurationException.php');
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoConfigurationFoundException.php');
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Objects' . DIRECTORY_SEPARATOR . 'Schema.php');
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'CommandLine.php');
+    if(defined("PPM") == false)
+    {
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'LocalConfigurationException.php');
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoConfigurationFoundException.php');
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Objects' . DIRECTORY_SEPARATOR . 'Schema.php');
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'CommandLine.php');
+    }
 
     /**
      * Class acm

@@ -2,7 +2,7 @@
     "package": {
         "package_name": "net.intellivoid.acm",
         "name": "Advanced Configuration Manager Library",
-        "version": "1.0.0.4",
+        "version": "1.0.0.5",
         "author": "Zi Xing Narrakas",
         "organization": "Intellivoid",
         "description": "Centralizes configurations and provides an API for managing configurations",

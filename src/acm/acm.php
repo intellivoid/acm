@@ -133,7 +133,7 @@
 
             file_put_contents(
                 $this->MasterConfigurationLocation,
-                json_encode($this->MasterConfiguration, JSON_PRETTY_PRINT)
+                json_encode($this->MasterConfiguration, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
             );
             return true;
         }
@@ -171,7 +171,7 @@
                 // Generate the master configuration file
                 file_put_contents(
                     $this->MasterConfigurationLocation,
-                    json_encode($this->MasterConfiguration, JSON_PRETTY_PRINT)
+                    json_encode($this->MasterConfiguration, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
                 );
             }
 
